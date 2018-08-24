@@ -4,6 +4,11 @@ jobs:
     machine:
       image: circleci/classic:201708-01
     steps:
+      # Trying to emulate the apt-get/systemd clashing problem
+      # https://unix.stackexchange.com/questions/315502/how-to-disable-apt-daily-service-on-ubuntu-cloud-vm-image
+      - run:
+          name: Go to sleep
+          command: sleep 60
       - run:
           name: Install PHP
           command: |
