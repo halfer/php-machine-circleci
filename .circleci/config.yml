@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     machine:
-      image: circleci/classic:201708-01
+      image: circleci/classic:201808-01
     steps:
       # Trying to emulate the apt-get/systemd clashing problem
       # https://unix.stackexchange.com/questions/315502/how-to-disable-apt-daily-service-on-ubuntu-cloud-vm-image
